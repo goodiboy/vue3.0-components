@@ -1,4 +1,4 @@
-import { defineComponent, ref, Ref, reactive, watchEffect } from 'vue'
+import { defineComponent, reactive, Ref, ref, watchEffect } from 'vue'
 import MonacoEditor from './components/MonacoEditor'
 import { createUseStyles } from 'vue-jss'
 import demos from './demos'
@@ -96,7 +96,7 @@ export default defineComponent({
       demo.uiSchemaCode = toJson(d.uiSchema)
     })
 
-    const methodRef: Ref<any> = ref()
+    const methodRef: Ref = ref()
 
     const handleChange = (v: any) => {
       demo.data = v
@@ -108,8 +108,7 @@ export default defineComponent({
       value: string
     ) {
       try {
-        const json = JSON.parse(value)
-        demo[filed] = json
+        demo[filed] = JSON.parse(value)
         ;(demo as any)[`${filed}Code`] = value
       } catch (err) {
         // some thing
