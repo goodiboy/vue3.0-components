@@ -1,5 +1,5 @@
 import { defineComponent, PropType } from 'vue'
-import { Schema } from '../Interface'
+import { Schema } from '../types'
 
 export default defineComponent({
   name: 'NumberField',

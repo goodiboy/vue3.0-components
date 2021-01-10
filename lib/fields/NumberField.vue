@@ -6,11 +6,11 @@
 
 <script lang="ts">
 import { defineComponent, toRefs } from 'vue'
-import { fieldPropsDefine } from '../Interface'
+import { FiledPropsDefine } from '../types'
 
 export default defineComponent({
   name: 'StringField',
-  props: fieldPropsDefine,
+  props: FiledPropsDefine,
   setup(props) {
     const { value } = toRefs(props)
     const handleChange = (e: any) => {
@@ -30,7 +30,7 @@ export default defineComponent({
 <!--
 <script lang="ts" setup="props">
 import { ref, defineProps, PropType } from 'vue'
-import { fieldPropsDefine, Schema } from '../Interface'
+import { FiledPropsDefine, Schema } from '../Interface'
 
 const props = defineProps({
   value: {

@@ -1,7 +1,7 @@
 export default {
   name: 'Simple',
   schema: {
-    type: 'string'
+    type: 'object'
   },
   uiSchema: {},
   default: 30
