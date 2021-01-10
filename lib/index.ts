@@ -1,3 +1,3 @@
-import SchemaForm from './SchemaForm'
+import SchemaForm from './types'
 
 export default SchemaForm

@@ -5,6 +5,7 @@
 </template>
 
 <script lang="ts" setup>
+/* eslint-disable */
 import { defineProps, PropType } from 'vue'
 import { Schema } from '../Interface'
 

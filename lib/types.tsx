@@ -5,7 +5,7 @@ import SchemaItems from './SchemaItems'
 export default defineComponent({
   name: 'SchemaForm',
   props: fieldPropsDefine,
-  setup(props, { slots, emit, attrs }) {
+  setup(props) {
     const handleChange = (v: any) => {
       props.onChange(v)
     }
