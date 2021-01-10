@@ -1,42 +1,31 @@
 <template>
   <div>
-    {{ value.value }}
+    <input type="text" :value="value" @input="handleChange" />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { fieldPropsDefine } from '../Interface'
-
-export default defineComponent({
-  name: 'StringField',
-  props: fieldPropsDefine,
-  setup(props) {}
-})
-</script>
-<!--
-<script lang="ts" setup="props">
-import { ref, defineProps, PropType } from 'vue'
-import { fieldPropsDefine, Schema } from '../Interface'
+<script lang="ts" setup>
+import { defineProps, PropType } from 'vue'
+import { Schema } from '../Interface'
 
 const props = defineProps({
+  schema: {
+    type: Object as PropType<Schema>,
+    required: true
+  },
   value: {
+    required: true
+  },
+  onChange: {
+    type: Function as PropType<(v: any) => void>,
     required: true
   }
 })
 
-console.log(props.value)
-
-// declare const props: {
-//   value: any
-//   onChange: (v: any) => void
-//   schema: Schema
-// }
-
 const handleChange = (e: any) => {
   console.log(e)
-  // props.onChange(e.target.value)
+  props.onChange(e.target.value)
 }
-</script>-->
+</script>
 
 <style scoped></style>

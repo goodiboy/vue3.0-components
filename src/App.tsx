@@ -108,6 +108,7 @@ export default defineComponent({
       value: string
     ) {
       try {
+        console.log(value)
         demo[filed] = JSON.parse(value)
         ;(demo as any)[`${filed}Code`] = value
       } catch (err) {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ value }}
+    <input type="number" :value="value" @input="handleChange" />
   </div>
 </template>
 
@@ -13,6 +13,17 @@ export default defineComponent({
   props: fieldPropsDefine,
   setup(props) {
     const { value } = toRefs(props)
+    const handleChange = (e: any) => {
+      const value = e.target.value
+      const num = Number(value)
+      console.log(num)
+      if (Number.isNaN(num)) props.onChange(undefined)
+      else props.onChange(num)
+    }
+    return {
+      value,
+      handleChange
+    }
   }
 })
 </script>
