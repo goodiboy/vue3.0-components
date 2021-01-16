@@ -1,7 +1,7 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, PropType, provide } from 'vue'
 import { FiledPropsDefine, Schema } from './types'
 import SchemaItems from './SchemaItems'
-
+import { SchemaFromContextKey } from './content'
 export default defineComponent({
   name: 'SchemaForm',
   props: {
@@ -19,8 +19,10 @@ export default defineComponent({
   },
   setup(props) {
     const handleChange = (v: any) => {
+      console.log(v)
       props.onChange(v)
     }
+    provide(SchemaFromContextKey, { SchemaItems })
     return () => {
       const { schema, value } = props
       return (

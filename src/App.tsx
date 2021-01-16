@@ -107,12 +107,13 @@ export default defineComponent({
       filed: 'schema' | 'data' | 'uiSchema',
       value: string
     ) {
+      console.log(value)
       try {
-        console.log(value)
         demo[filed] = JSON.parse(value)
         ;(demo as any)[`${filed}Code`] = value
       } catch (err) {
         // some thing
+        console.log(err)
       }
     }
 
