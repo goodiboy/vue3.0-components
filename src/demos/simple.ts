@@ -15,18 +15,18 @@ export default {
       telephone: {
         type: 'string',
         minLength: 10
+      },
+      staticArray: {
+        type: 'array',
+        items: [
+          {
+            type: 'string'
+          },
+          {
+            type: 'number'
+          }
+        ]
       }
-      // staticArray: {
-      //   type: 'array',
-      //   items: [
-      //     {
-      //       type: 'string'
-      //     },
-      //     {
-      //       type: 'number'
-      //     }
-      //   ]
-      // }
       // singleTypeArray: {
       //   type: 'array',
       //   items: {
