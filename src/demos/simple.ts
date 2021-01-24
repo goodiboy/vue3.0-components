@@ -26,21 +26,21 @@ export default {
             type: 'number'
           }
         ]
+      },
+      singleTypeArray: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            name: {
+              type: 'string'
+            },
+            age: {
+              type: 'number'
+            }
+          }
+        }
       }
-      // singleTypeArray: {
-      //   type: 'array',
-      //   items: {
-      //     type: 'object',
-      //     properties: {
-      //       name: {
-      //         type: 'string'
-      //       },
-      //       age: {
-      //         type: 'number'
-      //       }
-      //     }
-      //   }
-      // },
       // multiSelectArray: {
       //   type: 'array',
       //   items: {

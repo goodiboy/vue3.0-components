@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <input type="number" :value="value" @input="handleChange" />
-  </div>
+  <input type="number" :value="value" @input="handleChange" />
 </template>
 
 <script lang="ts">
