@@ -17,10 +17,18 @@ export default defineComponent({
     }
   },
   setup(props) {
+    const handleChange = (e: any) => {
+      const value = e.target.value
+      const num = Number(value)
+      if (Number.isNaN(num)) {
+        props.onChange(undefined)
+      } else {
+        props.onChange(num)
+      }
+    }
     return () => {
       const { value } = props
-      console.log(value)
-      return <div>{value}</div>
+      return <input type="number" value={value as any} onInput={handleChange} />
     }
   }
 })

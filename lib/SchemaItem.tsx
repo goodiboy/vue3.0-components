@@ -1,7 +1,7 @@
 import { defineComponent, computed } from 'vue'
 import { FiledPropsDefine, SchemaTypes } from './types'
-import StringField from './fields/StringField.vue'
-import NumberField from './fields/NumberField.vue'
+import StringField from './fields/StringField'
+import NumberField from './fields/NumberField'
 import ObjectField from './fields/ObjectField'
 
 import { retrieveSchema } from './utils'
