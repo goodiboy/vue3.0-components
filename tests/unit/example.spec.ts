@@ -17,5 +17,10 @@ describe('SchemaForm', () => {
     })
     const numberField = wrapper.findComponent(NumberField)
     expect(numberField.exists()).toBeTruthy() // 确保numberField是存在的
+    const input = numberField.find('input')
+    input.element.value = '123'
+    await input.trigger('input') // 触发事件
+    // await numberField.props('onChange')('123')
+    expect(value).toBe(123)
   })
 })
