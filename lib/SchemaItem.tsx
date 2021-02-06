@@ -26,15 +26,12 @@ export default defineComponent({
 
       switch (type) {
         case SchemaTypes.STRING:
-          console.log('string')
           Component = StringField
           break
         case SchemaTypes.NUMBER:
-          console.log('number')
           Component = NumberField
           break
         case SchemaTypes.OBJECT:
-          console.log('object')
           Component = ObjectField
           break
         case SchemaTypes.ARRAY:
