@@ -19,7 +19,6 @@ export default defineComponent({
   },
   setup(props) {
     const handleChange = (v: any) => {
-      console.log(v)
       props.onChange(v)
     }
     provide(SchemaFromContextKey, { SchemaItem })
